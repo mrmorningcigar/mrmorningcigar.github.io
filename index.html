@@ -3,393 +3,144 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="Mr. Morning Cigar — a calm morning ritual: coffee, quiet reflection, and cigar culture. Follow on Instagram." />
-  <meta name="robots" content="index,follow" />
+  <meta name="description" content="Mr. Morning Cigar — calm morning ritual: coffee, quiet reflection, and cigar culture." />
   <meta property="og:title" content="Mr. Morning Cigar" />
   <meta property="og:description" content="Quiet mornings. Slow smoke. Thoughtful reflection. Follow the ritual on Instagram." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.mrmorningcigar.com/" />
   <meta name="theme-color" content="#0b0f14" />
 
   <title>Mr. Morning Cigar</title>
 
   <style>
     :root{
+      /* QUICK THEME TWEAKS (match your IG): */
       --bg0:#070a0f;
       --bg1:#0b1018;
-      --card:#0e1622cc;
+      --card:#0f1724cc;
       --text:#eef3f8;
-      --muted:#b8c4d2;
-      --line:#203044;
-      --gold:#d7b46a;
+      --muted:#b9c6d6;
+      --line:#223449;
+
+      /* “Morning gold” accents */
+      --gold:#d8b56b;
       --gold2:#a8843a;
+
       --shadow: 0 18px 55px rgba(0,0,0,.55);
       --radius: 22px;
-      --max: 1040px;
-      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      --max: 1080px;
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
     }
     *{box-sizing:border-box}
-    html,body{height:100%}
     body{
       margin:0;
       font-family:var(--sans);
       color:var(--text);
       background:
-        radial-gradient(1200px 800px at 18% 12%, rgba(215,180,106,.22), transparent 55%),
-        radial-gradient(1000px 700px at 80% 20%, rgba(145,190,255,.13), transparent 55%),
+        radial-gradient(1200px 800px at 18% 12%, rgba(216,181,107,.22), transparent 55%),
+        radial-gradient(1000px 700px at 80% 20%, rgba(145,190,255,.12), transparent 55%),
         radial-gradient(900px 900px at 50% 90%, rgba(255,160,122,.08), transparent 60%),
         linear-gradient(180deg, var(--bg0), var(--bg1));
       overflow-x:hidden;
     }
-
-    /* subtle “morning haze” grain */
-    body:before{
-      content:"";
-      position:fixed; inset:0;
-      pointer-events:none;
-      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)' opacity='.22'/%3E%3C/svg%3E");
-      mix-blend-mode:overlay;
-      opacity:.14;
-    }
-
     a{color:inherit}
-    .wrap{max-width:var(--max); margin:0 auto; padding:28px 18px 48px}
+    .wrap{max-width:var(--max); margin:0 auto; padding:26px 18px 56px}
     header{
-      display:flex; align-items:center; justify-content:space-between; gap:14px;
-      position:sticky; top:0;
-      padding:14px 18px;
-      margin:-28px -18px 18px;
-      background:linear-gradient(180deg, rgba(7,10,15,.92), rgba(7,10,15,.55));
+      display:flex; align-items:center; justify-content:space-between; gap:12px;
+      padding:14px 16px;
+      border:1px solid rgba(34,52,73,.55);
+      background:linear-gradient(180deg, rgba(7,10,15,.80), rgba(7,10,15,.45));
+      border-radius:18px;
       backdrop-filter: blur(10px);
-      border-bottom:1px solid rgba(32,48,68,.45);
-      z-index:20;
     }
-    .brand{
-      display:flex; align-items:center; gap:12px;
-      letter-spacing:.4px;
-    }
+    .brand{display:flex; align-items:center; gap:12px}
     .mark{
-      width:36px; height:36px; border-radius:12px;
+      width:38px; height:38px; border-radius:14px;
       background:
-        radial-gradient(12px 12px at 30% 30%, rgba(255,255,255,.25), transparent 55%),
-        linear-gradient(135deg, rgba(215,180,106,.95), rgba(168,132,58,.85));
-      box-shadow:0 10px 28px rgba(215,180,106,.18);
+        radial-gradient(12px 12px at 30% 30%, rgba(255,255,255,.22), transparent 55%),
+        linear-gradient(135deg, rgba(216,181,107,.98), rgba(168,132,58,.9));
       border:1px solid rgba(255,255,255,.12);
+      box-shadow:0 14px 36px rgba(216,181,107,.18);
+      flex:0 0 auto;
     }
     .brand h1{
-      margin:0; font-size:15px; font-weight:700;
-      text-transform:uppercase;
+      margin:0; font-size:14px; font-weight:800; letter-spacing:.5px; text-transform:uppercase;
     }
     .brand .sub{
-      display:block; margin-top:2px;
-      font-size:12px; color:var(--muted); font-weight:500;
-      text-transform:none;
+      margin-top:2px;
+      font-size:12px; color:var(--muted); font-weight:600; text-transform:none;
     }
-
-    .nav{
-      display:flex; gap:10px; align-items:center; flex-wrap:wrap;
-    }
+    .nav{display:flex; gap:10px; flex-wrap:wrap; align-items:center}
     .btn{
       display:inline-flex; align-items:center; justify-content:center; gap:10px;
       padding:10px 14px;
       border-radius:14px;
-      border:1px solid rgba(32,48,68,.7);
-      background:rgba(14,22,34,.55);
+      border:1px solid rgba(34,52,73,.7);
+      background:rgba(15,23,36,.55);
       text-decoration:none;
-      font-weight:650;
+      font-weight:750;
       font-size:13px;
       transition:transform .12s ease, border-color .12s ease, background .12s ease;
       box-shadow:0 10px 24px rgba(0,0,0,.25);
     }
-    .btn:hover{ transform: translateY(-1px); border-color: rgba(215,180,106,.7); background: rgba(14,22,34,.72); }
+    .btn:hover{ transform: translateY(-1px); border-color: rgba(216,181,107,.7); background: rgba(15,23,36,.72); }
     .btn.primary{
-      background: linear-gradient(135deg, rgba(215,180,106,.95), rgba(168,132,58,.92));
+      background: linear-gradient(135deg, rgba(216,181,107,.98), rgba(168,132,58,.92));
       border:1px solid rgba(255,255,255,.18);
       color:#0b0f14;
-      box-shadow: 0 18px 40px rgba(215,180,106,.18);
+      box-shadow: 0 18px 40px rgba(216,181,107,.18);
     }
-    .btn.primary:hover{ transform: translateY(-1px) scale(1.01); }
 
     .hero{
       display:grid;
-      grid-template-columns: 1.15fr .85fr;
-      gap:18px;
+      grid-template-columns: 1.2fr .8fr;
+      gap:16px;
+      margin-top:16px;
       align-items:stretch;
-      margin-top:8px;
     }
     @media (max-width: 900px){
       .hero{ grid-template-columns:1fr; }
-      header{ position:static; margin:0 0 18px; border-radius:18px; }
     }
-
     .card{
       border-radius: var(--radius);
-      border: 1px solid rgba(32,48,68,.6);
-      background: linear-gradient(180deg, rgba(14,22,34,.65), rgba(10,14,20,.45));
+      border: 1px solid rgba(34,52,73,.55);
+      background: linear-gradient(180deg, rgba(15,23,36,.65), rgba(11,16,24,.45));
       box-shadow: var(--shadow);
       overflow:hidden;
       position:relative;
     }
-    .card.pad{ padding:22px; }
+    .pad{padding:22px}
+    .headline{font-size:42px; line-height:1.04; margin:0 0 10px; letter-spacing:-.6px}
+    @media (max-width:520px){ .headline{font-size:34px;} }
+    .lead{margin:0 0 18px; color:var(--muted); font-size:16px; line-height:1.55; max-width:60ch}
 
-    .headline{
-      font-size:42px;
-      line-height:1.05;
-      margin:0 0 10px;
-      letter-spacing:-.6px;
-    }
-    @media (max-width: 520px){
-      .headline{font-size:34px;}
-    }
-    .lead{
-      margin:0 0 18px;
-      color: var(--muted);
-      font-size:16px;
-      line-height:1.55;
-      max-width:60ch;
-    }
-    .pillrow{
-      display:flex; flex-wrap:wrap; gap:8px;
-      margin: 14px 0 18px;
-    }
+    .pillrow{display:flex; flex-wrap:wrap; gap:8px; margin:14px 0 18px}
     .pill{
       font-size:12px;
       padding:7px 10px;
       border-radius:999px;
-      border:1px solid rgba(32,48,68,.75);
-      background: rgba(14,22,34,.45);
+      border:1px solid rgba(34,52,73,.75);
+      background: rgba(15,23,36,.45);
       color: rgba(238,243,248,.92);
     }
-    .pill b{ color: var(--gold); font-weight:800; }
+    .pill b{ color: var(--gold); font-weight:900; }
 
-    .cta{
-      display:flex; gap:10px; flex-wrap:wrap; align-items:center;
-      margin-top:14px;
-    }
-    .tiny{
-      font-size:12px;
-      color: rgba(184,196,210,.9);
-      margin: 8px 0 0;
-    }
-
-    /* right card */
-    .panel{
-      padding:0;
-    }
-    .panelTop{
-      padding:20px 20px 14px;
-      border-bottom:1px solid rgba(32,48,68,.45);
+    .sideTop{
+      padding:18px 20px 14px;
+      border-bottom:1px solid rgba(34,52,73,.45);
       background:
-        radial-gradient(900px 250px at 20% 30%, rgba(215,180,106,.18), transparent 55%),
-        linear-gradient(180deg, rgba(14,22,34,.72), rgba(14,22,34,.52));
+        radial-gradient(900px 250px at 20% 30%, rgba(216,181,107,.18), transparent 55%),
+        linear-gradient(180deg, rgba(15,23,36,.72), rgba(15,23,36,.52));
     }
-    .panelTop h2{
-      margin:0 0 8px;
-      font-size:16px;
-      letter-spacing:.2px;
-    }
-    .panelTop p{
-      margin:0;
-      color:var(--muted);
-      font-size:13px;
-      line-height:1.45;
-    }
-    .list{
-      padding:14px 18px 18px;
-      display:grid;
-      gap:10px;
-    }
+    .sideTop h2{margin:0 0 8px; font-size:16px}
+    .sideTop p{margin:0; color:var(--muted); font-size:13px; line-height:1.45}
+    .list{padding:14px 18px 18px; display:grid; gap:10px}
     .item{
-      border:1px solid rgba(32,48,68,.55);
-      background: rgba(14,22,34,.45);
+      border:1px solid rgba(34,52,73,.55);
+      background: rgba(15,23,36,.45);
       border-radius:18px;
-      padding:12px 12px;
-      display:flex;
-      gap:10px;
-      align-items:flex-start;
+      padding:12px;
+      display:flex; gap:10px; align-items:flex-start;
     }
     .dot{
-      width:10px; height:10px; border-radius:999px;
-      margin-top:4px;
-      background: linear-gradient(135deg, rgba(215,180,106,.95), rgba(168,132,58,.9));
-      box-shadow:0 10px 20px rgba(215,180,106,.18);
-      flex:0 0 auto;
-    }
-    .item b{ display:block; font-size:13px; }
-    .item span{ display:block; color:var(--muted); font-size:12.5px; line-height:1.35; margin-top:2px; }
-
-    .grid{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap:14px;
-      margin-top:18px;
-    }
-    @media (max-width: 820px){
-      .grid{ grid-template-columns:1fr; }
-    }
-    .smallcard{
-      border-radius: var(--radius);
-      border: 1px solid rgba(32,48,68,.6);
-      background: rgba(14,22,34,.45);
-      box-shadow: 0 14px 36px rgba(0,0,0,.35);
-      padding:18px;
-    }
-    .smallcard h3{
-      margin:0 0 8px;
-      font-size:14px;
-      letter-spacing:.2px;
-    }
-    .smallcard p{
-      margin:0;
-      color:var(--muted);
-      font-size:13px;
-      line-height:1.5;
-    }
-
-    footer{
-      margin-top:26px;
-      padding:18px 4px 0;
-      color: rgba(184,196,210,.85);
-      font-size:12px;
-      display:flex;
-      justify-content:space-between;
-      gap:12px;
-      flex-wrap:wrap;
-      border-top:1px solid rgba(32,48,68,.4);
-    }
-    .footlinks{ display:flex; gap:12px; flex-wrap:wrap; }
-    .footlinks a{ text-decoration:none; border-bottom:1px dashed rgba(184,196,210,.35); }
-    .footlinks a:hover{ border-bottom-color: rgba(215,180,106,.8); color: rgba(238,243,248,.95); }
-    .disclaimer{
-      opacity:.92;
-      max-width:90ch;
-    }
-  </style>
-</head>
-
-<body>
-  <div class="wrap">
-    <header>
-      <div class="brand" aria-label="Site brand">
-        <div class="mark" aria-hidden="true"></div>
-        <div>
-          <h1>Mr. Morning Cigar <span class="sub">Quiet mornings • slow smoke • reflection</span></h1>
-        </div>
-      </div>
-
-      <nav class="nav" aria-label="Primary navigation">
-        <a class="btn" href="#about">About</a>
-        <a class="btn" href="#ritual">The Ritual</a>
-        <a class="btn primary" href="https://www.instagram.com/mr.morningcigar/" target="_blank" rel="noopener">Follow on Instagram</a>
-      </nav>
-    </header>
-
-    <main>
-      <section class="hero" aria-label="Hero section">
-        <div class="card pad">
-          <h2 class="headline">Start the day un-rushed.</h2>
-          <p class="lead">
-            Mr. Morning Cigar is a calm corner of the internet—coffee, morning light, cigar culture, and the kind of reflection
-            that helps you breathe again.
-          </p>
-
-          <div class="pillrow" aria-label="Highlights">
-            <div class="pill"><b>Morning-light</b> photography</div>
-            <div class="pill">Short reflections</div>
-            <div class="pill">Cigar notes & atmosphere</div>
-            <div class="pill">Quiet strength</div>
-          </div>
-
-          <div class="cta">
-            <a class="btn primary" href="https://www.instagram.com/mr.morningcigar/" target="_blank" rel="noopener">Visit @mr.morningcigar</a>
-            <a class="btn" href="#contact">Contact</a>
-          </div>
-
-          <p class="tiny">New here? Follow the Instagram for the daily ritual and updates.</p>
-        </div>
-
-        <aside class="card panel" aria-label="What you’ll find">
-          <div class="panelTop">
-            <h2>What you’ll find here</h2>
-            <p>A simple home base that points everything back to Instagram.</p>
-          </div>
-          <div class="list">
-            <div class="item">
-              <div class="dot" aria-hidden="true"></div>
-              <div>
-                <b>Morning posts</b>
-                <span>Photos that feel like early air: warm, quiet, grounded.</span>
-              </div>
-            </div>
-            <div class="item">
-              <div class="dot" aria-hidden="true"></div>
-              <div>
-                <b>Simple cigar notes</b>
-                <span>Flavor impressions, vibe, and what it helped you process.</span>
-              </div>
-            </div>
-            <div class="item">
-              <div class="dot" aria-hidden="true"></div>
-              <div>
-                <b>Slow living</b>
-                <span>Less noise. More presence. A ritual you can actually keep.</span>
-              </div>
-            </div>
-          </div>
-        </aside>
-      </section>
-
-      <section id="about" class="grid" aria-label="About section">
-        <div class="smallcard">
-          <h3>About Mr. Morning Cigar</h3>
-          <p>
-            This is a personal ritual project built around morning stillness—coffee, a cigar, and reflection.
-            It’s not about speed, flexing, or noise. It’s about showing up for your day with calm focus.
-          </p>
-        </div>
-        <div class="smallcard" id="ritual">
-          <h3>The Ritual (simple)</h3>
-          <p>
-            Step outside. Notice the light. Sip something warm. Light slowly. Breathe. Let the mind unwind.
-            Write one honest sentence. That’s it.
-          </p>
-        </div>
-
-        <div class="smallcard">
-          <h3>Want updates?</h3>
-          <p>
-            Instagram is the main feed. This site stays simple so you always know where to go.
-            Follow and say hello in the comments.
-          </p>
-          <div class="cta" style="margin-top:14px">
-            <a class="btn primary" href="https://www.instagram.com/mr.morningcigar/" target="_blank" rel="noopener">Follow on Instagram</a>
-            <a class="btn" href="#contact">Contact</a>
-          </div>
-        </div>
-
-        <div class="smallcard" id="contact">
-          <h3>Contact</h3>
-          <p>
-            For collaborations, features, or questions, reach out via Instagram DMs for now.
-            (Later you can add an email form here.)
-          </p>
-          <div class="cta" style="margin-top:14px">
-            <a class="btn" href="https://www.instagram.com/mr.morningcigar/" target="_blank" rel="noopener">Message on Instagram</a>
-          </div>
-        </div>
-      </section>
-
-      <footer>
-        <div class="disclaimer">
-          <strong>Note:</strong> This is lifestyle content. Please follow all local laws and age restrictions related to tobacco products.
-          Enjoy responsibly.
-        </div>
-        <div class="footlinks">
-          <a href="https://www.instagram.com/mr.morningcigar/" target="_blank" rel="noopener">Instagram</a>
-          <a href="https://mrmorningcigar.github.io/" target="_blank" rel="noopener">GitHub Pages</a>
-        </div>
-      </footer>
-    </main>
-  </div>
-</body>
-</html>
+      width:10px; height:10px; border-radius:999px; margin-top:4px;
+      background: linear-gradient(135deg, rgba(2
