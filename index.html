@@ -143,4 +143,177 @@
     }
     .dot{
       width:10px; height:10px; border-radius:999px; margin-top:4px;
-      background: linear-gradient(135deg, rgba(2
+      background: linear-gradient(135deg, rgba(216,181,107,.98), rgba(168,132,58,.9));
+      box-shadow:0 10px 20px rgba(216,181,107,.18);
+      flex:0 0 auto;
+    }
+    .item b{display:block; font-size:13px}
+    .item span{display:block; color:var(--muted); font-size:12.5px; line-height:1.35; margin-top:2px}
+
+    section{margin-top:18px}
+    .sectionTitle{display:flex; align-items:baseline; justify-content:space-between; gap:12px}
+    .sectionTitle h3{margin:0; font-size:16px}
+    .sectionTitle p{margin:0; color:var(--muted); font-size:13px}
+
+    .grid{
+      margin-top:12px;
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:12px;
+    }
+    @media (max-width: 960px){ .grid{grid-template-columns:1fr;} }
+
+    .product{
+      padding:16px;
+      border-radius:20px;
+      border:1px solid rgba(34,52,73,.55);
+      background: rgba(15,23,36,.45);
+      box-shadow:0 14px 36px rgba(0,0,0,.25);
+    }
+    .product h4{margin:0 0 6px; font-size:14px}
+    .product p{margin:0 0 10px; color:var(--muted); font-size:13px; line-height:1.45}
+    .product a{display:inline-flex}
+
+    .notice{
+      margin-top:10px;
+      font-size:12px;
+      color:rgba(185,198,214,.95);
+      border:1px solid rgba(34,52,73,.55);
+      background: rgba(15,23,36,.35);
+      padding:10px 12px;
+      border-radius:16px;
+    }
+
+    footer{
+      margin-top:26px;
+      padding:18px 4px 0;
+      color: rgba(185,198,214,.85);
+      font-size:12px;
+      display:flex;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+      border-top:1px solid rgba(34,52,73,.4);
+    }
+    .footlinks{display:flex; gap:12px; flex-wrap:wrap}
+    .footlinks a{text-decoration:none; border-bottom:1px dashed rgba(185,198,214,.35)}
+    .footlinks a:hover{border-bottom-color: rgba(216,181,107,.8)}
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="mark" aria-hidden="true"></div>
+        <div>
+          <h1>Mr. Morning Cigar</h1>
+          <div class="sub">Quiet mornings • slow smoke • reflection</div>
+        </div>
+      </div>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <a class="btn" href="#gear">Gear</a>
+        <a class="btn" href="#about">About</a>
+        <a class="btn primary" href="https://www.instagram.com/mr.morningcigar/" target="_blank" rel="noopener">Follow on Instagram</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-label="Hero">
+        <div class="card pad">
+          <h2 class="headline">Start the day un-rushed.</h2>
+          <p class="lead">
+            A calm corner of the internet—coffee, morning light, cigar culture, and reflection.
+            Built for men who want quiet strength, not noise.
+          </p>
+
+          <div class="pillrow" aria-label="Highlights">
+            <div class="pill"><b>Morning-light</b> photography</div>
+            <div class="pill">Short reflections</div>
+            <div class="pill">Cigar atmosphere</div>
+            <div class="pill">Simple ritual</div>
+          </div>
+
+          <div style="display:flex; gap:10px; flex-wrap:wrap">
+            <a class="btn primary" href="#gear">See the Gear</a>
+            <a class="btn" href="https://www.instagram.com/mr.morningcigar/" target="_blank" rel="noopener">Visit @mr.morningcigar</a>
+          </div>
+
+          <div class="notice" role="note">
+            <strong>Affiliate note:</strong> Some links on this site are affiliate links. If you buy through them, I may earn a small commission at no extra cost to you.
+          </div>
+        </div>
+
+        <aside class="card" aria-label="What you’ll find">
+          <div class="sideTop">
+            <h2>What you’ll find</h2>
+            <p>A simple home base that points everything back to Instagram — plus a clean “Gear” list.</p>
+          </div>
+          <div class="list">
+            <div class="item"><div class="dot"></div><div><b>Morning posts</b><span>Warm, grounded photos — early air vibes.</span></div></div>
+            <div class="item"><div class="dot"></div><div><b>Ritual notes</b><span>One honest sentence. Keep it simple.</span></div></div>
+            <div class="item"><div class="dot"></div><div><b>Accessories</b><span>Tools that make the ritual smoother (and gift-able).</span></div></div>
+          </div>
+        </aside>
+      </section>
+
+      <section id="gear" aria-label="Gear">
+        <div class="sectionTitle">
+          <h3>My Morning Gear</h3>
+          <p>Simple, tested, and practical.</p>
+        </div>
+
+        <div class="grid">
+          <div class="product">
+            <h4>Reliable Torch Lighter</h4>
+            <p>Clean ignition, steady flame—no drama, just ritual.</p>
+            <!-- Replace # with your Amazon affiliate link -->
+            <a class="btn" href="#" target="_blank" rel="nofollow noopener">View on Amazon</a>
+          </div>
+
+          <div class="product">
+            <h4>Everyday Cigar Cutter</h4>
+            <p>Sharp, consistent cut. The small thing that changes the whole smoke.</p>
+            <a class="btn" href="#" target="_blank" rel="nofollow noopener">View on Amazon</a>
+          </div>
+
+          <div class="product">
+            <h4>Calm Coffee Setup</h4>
+            <p>Because the ritual starts before the light—coffee is the first “yes.”</p>
+            <a class="btn" href="#" target="_blank" rel="nofollow noopener">View on Amazon</a>
+          </div>
+        </div>
+
+        <div class="notice" role="note" aria-label="Amazon disclosure">
+          <strong>Required disclosure:</strong> As an Amazon Associate I earn from qualifying purchases.
+        </div>
+      </section>
+
+      <section id="about" aria-label="About">
+        <div class="sectionTitle">
+          <h3>About</h3>
+          <p>Why this exists.</p>
+        </div>
+        <div class="card pad">
+          <p class="lead" style="margin:0">
+            Mr. Morning Cigar is about slowing down—morning light, reflection, and a steady ritual.
+            Instagram is the main feed; this site is your clean home base.
+          </p>
+        </div>
+      </section>
+
+      <footer>
+        <div>
+          <strong>As an Amazon Associate I earn from qualifying purchases.</strong>
+          <div style="margin-top:6px">Please follow all local laws and age restrictions. Enjoy responsibly.</div>
+        </div>
+        <div class="footlinks">
+          <a href="https://www.instagram.com/mr.morningcigar/" target="_blank" rel="noopener">Instagram</a>
+          <a href="#gear">Gear</a>
+        </div>
+      </footer>
+    </main>
+  </div>
+</body>
+</html>
